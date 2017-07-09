@@ -23,6 +23,7 @@
 	    <link href="{% static 'css/style-responsive.css' %}" rel="stylesheet">
 
 	    <script src="{% static 'js/chart-master/Chart.js' %}"></script>
+	    {% block extra_head %}{% endblock %}
 	</head>
 	<body>
 		<section id="container">
@@ -66,7 +67,7 @@
 	                      </ul>
 	                  </li>
 	                  <li class="sub-menu">
-	                      <a class="active" href="javascript:;" >
+	                      <a class="active" href="/board" >
 	                          <i class="fa fa-book"></i>
 	                          <span>자유 게시판</span>
 	                      </a>

@@ -1,13 +1,34 @@
 {% extends "board/layout.html" %}
 
 {% block content %}
-	<h1>board/post_list.html</h1>
-
-	<ul>
-	{% for post in post_list %}
-	<li>
-		{{ post.title }}
-	</li>
-	{% endfor %}
-	</ul>
+	<h1></h1>
+	<div class="col-md-12 mt">
+		<div class="content-panel">
+			<table class="table table-hover">
+				<h4><i class="fa fa-angle-right"></i> Hover Table</h4>
+				<hr>
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>제목</th>
+						<th>작성자</th>
+						<th>작성날짜</th>
+					</tr>
+				</thead>
+				{% for post in post_list %}
+				<tbody>
+					<tr>
+						<td>{{ post.pk }}</td>
+						<td>
+							<a href="{% url "board:post_detail" post.pk %}">
+							{{ post.title }}	
+						</td>
+						<td>숩인몬</td>
+						<td>{{ post.created_at }}</td>
+					</tr>
+				</tbody>
+				{% endfor %}
+			</table>
+		</div><!--/content-panel -->
+	</div><!-- /col-md-12 -->
 {% endblock %}

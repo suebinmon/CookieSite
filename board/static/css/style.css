@@ -985,14 +985,16 @@ PANELS CONFIGURATIONS
 /*Panel Size*/
 
 .pn {
-	height: 250px;
+/*    width: 1250px;
+	height: 850px;*/
+/*    height: 250px;*/
 	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.pn:hover {
+/*.pn:hover {
 	box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
 	
-}
+}*/
 
 /*Grey Panel*/
 

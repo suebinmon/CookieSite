@@ -1,0 +1,36 @@
+{% extends "board/layout.html" %}
+{% block extra_head %}
+<style>
+	.post_photo {
+		max-width: 80%;
+	}
+</style>
+{% endblock %}
+{% block content %}
+	<!-- WEATHER-2 PANEL -->
+	<div class="col-md-12 mt">
+		<div class="weather-2 pn">
+			<div class="weather-2-header">
+				<div class="row">
+					<div class="col-sm-6 col-xs-6">
+						<p>{{ post.title }}</p>
+					</div>
+					<div class="col-sm-6 col-xs-6 goright">
+						<p class="small">{{ post.created_at }}</p>
+					</div>
+				</div>
+			</div><!-- /weather-2 header -->
+			<div class="row centered">
+				{% if post.photo %}
+ 					<img src="{{ post.photo.url }}" class="post_photo" />
+ 				{% endif %}			
+			</div>
+			<hr/>
+			<div class="row data">
+				<div class="col-sm-6 col-xs-6 goleft">
+					{{ post.content|linebreaks }}
+				</div>
+			</div>
+		</div>
+	</div><!--/col-md-4 -->
+ {% endblock %}
