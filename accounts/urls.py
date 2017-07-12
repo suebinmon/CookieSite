@@ -9,4 +9,5 @@ urlpatterns=[
 	url(r'^logout/$', logout, name='logout', kwargs={
 		'next_page':'login',
 		}),
+	url(r'^profile/$', views.profile, name='profile'),
 ]
