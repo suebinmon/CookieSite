@@ -23,7 +23,7 @@
 							<a href="{% url "board:post_detail" post.pk %}">
 							{{ post.title }}	
 						</td>
-						<td>숩인몬</td>
+						<td>{{post.author}}</td>
 						<td>{{ post.created_at }}</td>
 					</tr>
 				</tbody>
