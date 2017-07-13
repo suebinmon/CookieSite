@@ -11,6 +11,7 @@ def index(request):
 		'post_list': post_list,
 		})
 
+
 def post_detail(request, pk):
 	post = get_object_or_404(Post, pk=pk)
 	return render(request, 'board/post_detail.html', {
