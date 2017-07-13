@@ -11,6 +11,11 @@ def index(request):
 		'post_list': post_list,
 		})
 
+def intro(request):
+	return render(request, 'board/intro.html')
+
+def QnA(request):
+	return render(request, 'board/QnA.html')
 
 def post_detail(request, pk):
 	post = get_object_or_404(Post, pk=pk)
