@@ -10,4 +10,5 @@ urlpatterns=[
 		'next_page':'login',
 		}),
 	url(r'^profile/$', views.profile, name='profile'),
+	url(r'^signup/$', views.signup, name='signup'),
 ]

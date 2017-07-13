@@ -5,3 +5,6 @@ from django.conf import settings
 
 def profile(request):
 	return render(request, 'accounts/profile.html')
+
+def signup(request):
+	return render(request, 'accounts/signup.html')
