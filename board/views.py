@@ -20,6 +20,9 @@ def QnA(request):
 def Main(request):
 	return render(request, 'board/Main.html')
 
+def lock(request):
+	return render(request, 'board/lock.html')
+
 def post_detail(request, pk):
 	post = get_object_or_404(Post, pk=pk)
 	return render(request, 'board/post_detail.html', {
