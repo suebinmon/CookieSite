@@ -9,5 +9,9 @@ class PostAdmin(admin.ModelAdmin):
 	list_editable = ['is_public']
 
 
-admin.site.register(Comment)
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+	list_display = ['id', 'message', 'is_public', 'created_at']
+	list_display_links = ['message']
+	list_editable = ['is_public']
 

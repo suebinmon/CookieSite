@@ -34,11 +34,11 @@ class Comment(models.Model):
 	author = models.ForeignKey(settings.AUTH_USER_MODEL)
 	message = models.TextField()
 	created_at = models.DateTimeField(auto_now_add=True)
+	is_public = models.BooleanField(default=False)
 	updated_at=models.DateTimeField(auto_now=True)
-	approved_comment = models.BooleanField(default=False)
 
 	def __str__(self):
-		return self.text
+		return self.message
 
 	def get_edit_url(self):
 		return reverse('board:comment_edit', args=[self.post.pk, self.pk])
