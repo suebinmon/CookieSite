@@ -17,6 +17,9 @@ def intro(request):
 def QnA(request):
 	return render(request, 'board/QnA.html')
 
+def Main(request):
+	return render(request, 'board/Main.html')
+
 def post_detail(request, pk):
 	post = get_object_or_404(Post, pk=pk)
 	return render(request, 'board/post_detail.html', {
