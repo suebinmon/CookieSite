@@ -1,0 +1,61 @@
+{% extends "board/layout.html" %}
+{% block content %}
+ <h3><i class="fa fa-angle-right"></i> Sing up</h3>
+          	
+          	<!-- BASIC FORM ELELEMNTS -->
+          	<div class="row mt">
+          		<div class="col-lg-12">
+                  <div class="form-panel">
+                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Hello, Cookie</h4>
+                  	  <span class="help-block">개인정보 보호를 위해 관리자에게 최소한의 정보를 메일로 보내 컨펌을 받는 식의 회원가입을 운영하고있습니다.<br>
+                  	  매주 월요일 컨펌을 확인하는 운영방침으로 바로 가입 승낙이 안될 수 있으니 참고하시길 바랍니다. </span>
+                      <form class="form-horizontal style-form" method="get">
+                       <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">id</label>
+                              <div class="col-sm-10">
+                                  <input class="form-control" id="focusedInput" type="text" placeholder="*">
+                              </div>
+                       </div>
+
+                       <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">password</label>
+                              <div class="col-sm-10">
+                                  <input class="form-control" id="focusedInput" type="password" placeholder="*">
+                              </div>
+                       </div>
+
+                       <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">name</label>
+                              <div class="col-sm-10">
+                                  <input class="form-control" id="focusedInput" type="text" placeholder="*">
+                              </div>
+                       </div>
+
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">major</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">activity</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control">
+                                  <span class="help-block">어떠한 활동을 하고 싶은 지 간단한 희망사항을 적어주세요~!</span>
+                              </div>
+                          </div>
+                       
+                          <div class="form-group">
+                              <label class="col-lg-2 col-sm-2 control-label">to</label>
+                              <div class="col-lg-10">
+                                  <p class="form-control-static">cookieemail@example.com</p>
+                              </div>
+                          </div>
+                           <p align="right"><button type="submit" class="btn btn-theme">Sign up</button></p>
+                      </form>
+                  </div>
+          		</div><!-- col-lg-12-->      	
+          	</div><!-- /row -->
+
+
+{% endblock %}
