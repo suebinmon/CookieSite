@@ -33,7 +33,7 @@
 
 	<ul>
 		{% for comment in post.comment_set.all %}
-		<li>{{comment.message|linebreaks}} &nbsp;
+		<li>{{comment.message}} &nbsp;
 		by {{comment.author}} &nbsp;
 		at {{comment.created_at}} &nbsp;
 		{% if comment.author == request.user %}
