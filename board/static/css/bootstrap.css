@@ -959,6 +959,17 @@ img {
 .img-circle {
   border-radius: 50%;
 }
+
+/*suebinmon create*/
+.img-heart {
+  border-radius: 50%; 
+}
+
+.img-heart:hover {
+  background-color: red;
+  border-radius: 50%; 
+}
+
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
