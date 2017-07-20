@@ -1,0 +1,23 @@
+{% extends "board/layout.html" %}
+{% block extra_head %}
+<style>
+	.post_photo {
+		max-width: 80%;
+	}
+</style>
+ 
+
+{% endblock %}
+{% block content %}
+
+<form action="" method="POST" enctype="multipart/form-">
+{% csrf_token %}
+<p>
+{{form.as_p}}
+</p>
+<br>
+<button class="btn btn-round btn-warning" type="submit">Upload</button>
+
+</form>
+
+{% endblock %}

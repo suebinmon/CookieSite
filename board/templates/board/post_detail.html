@@ -25,7 +25,17 @@
 			{% endif %}	
 			<br>
 				{{ post.content|linebreaks }}
-				
+				<p align="right">
+				{% if post.author == request.user %}
+				<a href="{{ post.get_edit_url }}" class="btn btn-theme">
+				수정
+				</a>
+				<a href="{{ post.get_delete_url }}" class="btn btn-theme">
+				삭제
+				</a>
+				{% endif %}
+				</p>
+
 			</div>
 			</div>
 		
@@ -70,4 +80,6 @@
 		 </p>
  	</div>
 	</div><!--/col-md-4 -->
+
  {% endblock %}
+

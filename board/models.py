@@ -21,12 +21,18 @@ class Post(models.Model):
 	def get_absolute_url(self):
 		return reverse('board:post_detail', args=[self.pk])
 
-	def delete(self, *args, **kwargs):
-		self.image.delete()
-		super(Post, self).delete(*args, **kwargs)
+	#def delete(self, *args, **kwargs):
+		#self.image.delete()
+		#super(Post, self).delete(*args, **kwargs)
 
 	def __str__(self):
 		return self.title
+
+	def get_edit_url(self):
+		return reverse('board:post_edit', args=[self.pk])
+
+	def get_delete_url(self):
+		return reverse('board:post_delete', args=[self.pk])
 
 class Comment(models.Model):
 	#Post:Comment = 1:N
