@@ -54,6 +54,7 @@ a, a:hover, a:focus {
 .btn-round {
 	border-radius: 20px;
 	-webkit-border-radius: 20px;
+    margin-right: 10px;
 }
 
 .accordion-heading .accordion-toggle {

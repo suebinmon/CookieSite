@@ -22,25 +22,25 @@
 					  			<p>933 People liked your page the last 24hs. Whoohoo!</p>
                   		</div>
                   		<div class="col-md-2 col-sm-2 box0">
-                  			<div class="box1">
+<!--                   			<div class="box1">
 					  			<span class="li_cloud"></span>
 					  			<h3>+48</h3>
                   			</div>
-					  			<p>48 New files were added in your cloud storage.</p>
+					  			<p>48 New files were added in your cloud storage.</p> -->
                   		</div>
                   		<div class="col-md-2 col-sm-2 box0">
                   			<div class="box1">
-					  			<span class="li_stack"></span>
+					  			<span class="li_news"></span>
 					  			<h3>23</h3>
                   			</div>
 					  			<p>You have 23 unread messages in your inbox.</p>
                   		</div>
                   		<div class="col-md-2 col-sm-2 box0">
-                  			<div class="box1">
+<!--                   			<div class="box1">
 					  			<span class="li_news"></span>
 					  			<h3>+10</h3>
                   			</div>
-					  			<p>More than 10 news were added in your reader.</p>
+					  			<p>More than 10 news were added in your reader.</p> -->
                   		</div>
                   		<div class="col-md-2 col-sm-2 box0">
                   			<div class="box1">
@@ -54,7 +54,40 @@
                   					
 					
 					<div class="row mt">
-
+						<h1></h1>
+						<div class="col-md-12 mt">
+							<div class="content-panel">
+								<table class="table table-hover">
+									<h4><i class="fa fa-angle-right"></i> 자유 게시판</h4>
+									<hr>
+									<thead>
+										<tr>
+											<th>번호</th>
+											<th>제목</th>
+											<th>작성자</th>
+											<th>작성날짜</th>
+										</tr>
+									</thead>
+									{% for post in post_list %}
+									<tbody>
+										<tr>
+											<td>{{ post.pk }}</td>
+											<td>
+												<a href="{% url "board:post_detail" post.pk %}">
+												{{ post.title }} ({{ post.comments_count }})</a>
+											</td>
+											<td>{{post.author}}</td>
+											<td>{{ post.created_at }}</td>
+										</tr>
+									</tbody>
+									{% endfor %}
+								</table>
+								<p align="right"><a href="{% url "board:post_new" %}" class="btn btn-round btn-warning">
+							 		게시글 쓰기
+									 </a>
+									 </p>
+							</div><!--/content-panel -->
+						</div><!-- /col-md-12 -->
 					</div><!-- /row -->	
 					
                   </div><!-- /col-lg-9 END SECTION MIDDLE -->

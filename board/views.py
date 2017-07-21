@@ -18,7 +18,10 @@ def QnA(request):
 	return render(request, 'board/QnA.html')
 
 def Main(request):
-	return render(request, 'board/Main.html')
+	post_list = Post.objects.all()
+	return render(request, 'board/Main.html', {
+		'post_list': post_list,
+		})
 
 def lock(request):
 	return render(request, 'board/lock.html')
